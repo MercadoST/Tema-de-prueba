@@ -1,0 +1,18 @@
+/*
+Theme Name: Tema 1
+Author: Santiago Mercado
+Author URI: https://wordpress.org/
+Description: Primer tema creado por mi
+Tags: blog, one-column, full-width-template, jr-code
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+*/
+
+.subscribe{
+    background: url(images/bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
