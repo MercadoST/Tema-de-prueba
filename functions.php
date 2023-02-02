@@ -13,4 +13,29 @@ function clase_menu_navegacion($atts, $menu_item, $args){
     return $atts;
 }
 
+//Imagenes destacadas o Thumbnails
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' );
+
+}
+
+//Sidebar
+
+add_action( 'widgets_init', 'singles_sidebars' );
+function singles_sidebars() {
+	/* Register the 'primary' sidebar. */
+	register_sidebar(
+		array(
+			'id'            => 'lateral',
+			'name'          => __( 'Sidebar lateral' ),
+			'description'   => __( 'Un sidebar para agregar widgets' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s my-3">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	/* Repeat register_sidebar() code for additional sidebars. */
+}
+
 ?>
